@@ -6,7 +6,7 @@ import com.help.bell.databinding.ItemHashtagBinding
 import com.help.bell.model.BoardData
 import com.help.bell.model.HashtagData
 
-class BoardAdapter(private val boardList: List<BoardData>) :
+class BoardAdapter(private val boardList: MutableList<BoardData>) :
     RecyclerView.Adapter<BoardAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: ItemBoardBinding) :
@@ -34,5 +34,11 @@ class BoardAdapter(private val boardList: List<BoardData>) :
 
     override fun getItemCount(): Int {
         return boardList.size
+    }
+    fun removeItem(position: Int) {
+        if (position in 0 until boardList.size) {
+            boardList.removeAt(position)
+            notifyItemRemoved(position)
+        }
     }
 }

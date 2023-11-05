@@ -6,7 +6,7 @@ import com.help.bell.databinding.ItemHashtagBinding
 import com.help.bell.model.HashtagData
 import com.help.bell.ui.activity.HashtagDetailActivity
 
-class HashtagAdapter(private val hashtagList: List<HashtagData>) :
+class HashtagAdapter(private val hashtagList: MutableList<HashtagData>) :
     RecyclerView.Adapter<HashtagAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: ItemHashtagBinding) :
@@ -42,4 +42,13 @@ class HashtagAdapter(private val hashtagList: List<HashtagData>) :
     override fun getItemCount(): Int {
         return hashtagList.size
     }
+
+
+    fun removeItem(position: Int) {
+        if (position in 0 until hashtagList.size) {
+            hashtagList.removeAt(position)
+            notifyItemRemoved(position)
+        }
+    }
+
 }

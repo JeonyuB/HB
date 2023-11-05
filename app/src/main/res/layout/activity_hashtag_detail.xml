@@ -24,8 +24,7 @@
 
     </LinearLayout>
 
-    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -146,6 +145,15 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="73dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                android:text="삭제"
+                android:textColor="@color/white"
+                />
+
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -192,8 +200,11 @@
                     android:layout_marginStart="10dp"
                     android:text="입력"
                     android:textColor="@color/white" />
+
             </LinearLayout>
+
         </LinearLayout>
+
     </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

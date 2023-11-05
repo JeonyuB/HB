@@ -6,7 +6,7 @@ import com.help.bell.databinding.ItemHashtagReplyBinding
 import com.help.bell.model.ReplyData
 import com.help.bell.ui.activity.ProfileDetailActivity
 
-class ReplyAdapter(private val replyList: List<ReplyData>) :
+class ReplyAdapter(private val replyList: MutableList<ReplyData>) :
     RecyclerView.Adapter<ReplyAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: ItemHashtagReplyBinding) :
